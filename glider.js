@@ -368,16 +368,16 @@
         if (backwards) slide -= _.opt.slidesToScroll;
         else slide += _.opt.slidesToScroll;
 
-        if (_.opt.rewind) {
-          var scrollLeft = _.ele.scrollLeft;
-          slide =
-            backwards && !scrollLeft
-              ? _.slides.length
-              : !backwards &&
-                scrollLeft + _.containerWidth >= Math.floor(_.trackWidth)
-              ? 0
-              : slide;
-        }
+        // if (_.opt.rewind) {
+        //   var scrollLeft = _.ele.scrollLeft;
+        //   slide =
+        //     backwards && !scrollLeft
+        //       ? _.slides.length
+        //       : !backwards &&
+        //         scrollLeft + _.containerWidth >= Math.floor(_.trackWidth)
+        //       ? 0
+        //       : slide;
+        // }
       }
 
       slide = Math.max(Math.min(slide, _.slides.length), 0);
