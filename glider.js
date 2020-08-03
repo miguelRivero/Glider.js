@@ -456,23 +456,23 @@
     _window.requestAnimationFrame(animate);
   };
 
-  gliderPrototype.removeItem = function (index) {
-    var _ = this;
+  // gliderPrototype.removeItem = function (index) {
+  //   var _ = this;
 
-    if (_.slides.length) {
-      _.track.removeChild(_.slides[index]);
-      _.refresh(true);
-      _.emit("remove");
-    }
-  };
+  //   if (_.slides.length) {
+  //     _.track.removeChild(_.slides[index]);
+  //     _.refresh(true);
+  //     _.emit("remove");
+  //   }
+  // };
 
-  gliderPrototype.addItem = function (ele) {
-    var _ = this;
+  // gliderPrototype.addItem = function (ele) {
+  //   var _ = this;
 
-    _.track.appendChild(ele);
-    _.refresh(true);
-    _.emit("add");
-  };
+  //   _.track.appendChild(ele);
+  //   _.refresh(true);
+  //   _.emit("add");
+  // };
 
   gliderPrototype.handleMouse = function (e) {
     var _ = this;
