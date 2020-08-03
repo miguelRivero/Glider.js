@@ -106,8 +106,8 @@
 
     _.containerWidth = _.ele.clientWidth;
 
-    var breakpointChanged = _.settingsBreakpoint();
-    if (!paging) paging = breakpointChanged;
+    // var breakpointChanged = _.settingsBreakpoint();
+    // if (!paging) paging = breakpointChanged;
 
     if (
       _.opt.slidesToShow === "auto" ||
@@ -142,11 +142,11 @@
 
     _.opt.resizeLock && _.scrollTo(_.slide * _.itemWidth, 0);
 
-    if (breakpointChanged || paging) {
-      _.bindArrows();
-      _.buildDots();
-      _.bindDrag();
-    }
+    // if (breakpointChanged || paging) {
+    //   _.bindArrows();
+    //   _.buildDots();
+    //   _.bindDrag();
+    // }
 
     _.updateControls();
 
@@ -511,7 +511,7 @@
     }
 
     _.breakpoint = 0;
-    _.settingsBreakpoint();
+    // _.settingsBreakpoint();
   };
 
   gliderPrototype.destroy = function () {
