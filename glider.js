@@ -402,35 +402,35 @@
     return false;
   };
 
-  gliderPrototype.settingsBreakpoint = function () {
-    var _ = this;
+  // gliderPrototype.settingsBreakpoint = function () {
+  //   var _ = this;
 
-    var resp = _._opt.responsive;
+  //   var resp = _._opt.responsive;
 
-    if (resp) {
-      // Sort the breakpoints in mobile first order
-      resp.sort(function (a, b) {
-        return b.breakpoint - a.breakpoint;
-      });
+  //   if (resp) {
+  //     // Sort the breakpoints in mobile first order
+  //     resp.sort(function (a, b) {
+  //       return b.breakpoint - a.breakpoint;
+  //     });
 
-      for (var i = 0; i < resp.length; ++i) {
-        var size = resp[i];
-        if (_window.innerWidth >= size.breakpoint) {
-          if (_.breakpoint !== size.breakpoint) {
-            _.opt = Object.assign({}, _._opt, size.settings);
-            _.breakpoint = size.breakpoint;
-            return true;
-          }
-          return false;
-        }
-      }
-    }
-    // set back to defaults in case they were overriden
-    var breakpointChanged = _.breakpoint !== 0;
-    _.opt = Object.assign({}, _._opt);
-    _.breakpoint = 0;
-    return breakpointChanged;
-  };
+  //     for (var i = 0; i < resp.length; ++i) {
+  //       var size = resp[i];
+  //       if (_window.innerWidth >= size.breakpoint) {
+  //         if (_.breakpoint !== size.breakpoint) {
+  //           _.opt = Object.assign({}, _._opt, size.settings);
+  //           _.breakpoint = size.breakpoint;
+  //           return true;
+  //         }
+  //         return false;
+  //       }
+  //     }
+  //   }
+  //   // set back to defaults in case they were overriden
+  //   var breakpointChanged = _.breakpoint !== 0;
+  //   _.opt = Object.assign({}, _._opt);
+  //   _.breakpoint = 0;
+  //   return breakpointChanged;
+  // };
 
   gliderPrototype.scrollTo = function (scrollTarget, scrollDuration, callback) {
     var _ = this;
